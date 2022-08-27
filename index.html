@@ -540,10 +540,11 @@
 							<img src="images/bca.png" alt="" style="width: 64px; height:58px;">
 							<img src="images/bri.png" alt="" style="width: 64px; height:58px;">
 							<h3 style="font-family: 'Oswald', Arial, serif;"></h3>
-							<p style="font-family:  Arial, serif">BRI : 3159-01-027511-53-3</p>
-							<p style="font-family:  Arial, serif">BCA : 6150812381</p>
+							<p style="font-family:  Arial, serif; margin-bottom: 7px;">BRI : 3159-01-027511-53-3</p>
+							<a class="btn btn-primary" id="CopyBri">Salin <i class="icon-copy"></i></a>
+							<p style="font-family:  Arial, serif; margin-bottom: 9px;">BCA : 6150812381</p>
+							<a class="btn btn-primary" id="CopyBca">Salin <i class="icon-copy"></i></a>
 							<p style="font-family:  Arial, serif">An. AMINATUS SHOLICHA</p>
-							<a class="btn btn-primary">Salin <i class="icon-copy"></i></a>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 text-center">
@@ -777,6 +778,34 @@
 
 document.querySelector('#Copy').onclick = function() {
   Clipboard_CopyTo('085258283465');
+}
+</script>
+<script>
+	function Clipboard_CopyTo(value) {
+  var tempInput = document.createElement("input");
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
+document.querySelector('#CopyBri').onclick = function() {
+  Clipboard_CopyTo('3159-01-027511-53-3');
+}
+</script>
+<script>
+	function Clipboard_CopyTo(value) {
+  var tempInput = document.createElement("input");
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
+document.querySelector('#CopyBca').onclick = function() {
+  Clipboard_CopyTo('6150812381');
 }
 </script>
 
